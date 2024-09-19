@@ -2,6 +2,8 @@
 
 This app allows you to upload a PDF document via a web interface and start chatting with the app. The backend is hosted using FastAPI on Google Colab, with Ngrok being used for reverse proxy.
 
+Website URL: https://satyadewangan05-rag-using-llama3-web-jeqers.streamlit.app/
+
 ## Features
 
 - Upload a PDF document
