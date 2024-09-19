@@ -25,8 +25,8 @@ def send_message(url, message, file_info=None):
             files=files
         )
 
-        st.write(f"Status Code: {response.status_code}")
-        st.write(f"Response Content: {response.content}")
+        # st.write(f"Status Code: {response.status_code}")
+        # st.write(f"Response Content: {response.content}")
 
         response.raise_for_status()  # This will raise an exception for HTTP errors
 
@@ -36,7 +36,7 @@ def send_message(url, message, file_info=None):
         )
         return result["response"]
     except requests.exceptions.RequestException as e:
-        print(f"Error: {str(e)}")
+        # print(f"Error: {str(e)}")
         st.error(f"Error: {str(e)}")
         if hasattr(e, 'response') and e.response is not None:
             st.error(f"Response content: {e.response.content}")
