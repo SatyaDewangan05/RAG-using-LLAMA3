@@ -1,58 +1,65 @@
-# PDF Upload and Chat App
-
-This app allows you to upload a PDF document via a web interface and start chatting with the app. The backend is hosted using FastAPI on Google Colab, with Ngrok being used for reverse proxy.
+# LLaMa3-RAG Document Intelligence System
 
 Website URL: https://satyadewangan05-rag-using-llama3-web-jeqers.streamlit.app/
 
+This project implements a Retrieval-Augmented Generation (RAG) system using LLaMa3 and LlamaIndex, deployed with FastAPI and Streamlit. It enables efficient, user-friendly access to advanced AI-powered document retrieval and generation capabilities.
+
 ## Features
 
-- Upload a PDF document
-- Process and chat with the app using the uploaded document
+- Utilizes LLaMa3 for advanced natural language processing
+- Implements efficient document indexing and semantic search using LlamaIndex
+- FastAPI backend for robust API endpoints
+- Streamlit frontend for an intuitive user interface
+- Supports document upload and intelligent querying
 
-## Requirements
+## How to Use the App
 
-- Python 3.x
-- FastAPI
-- Streamlit
-- Ngrok
-- Google Colab
+Follow these steps to set up and use the application:
 
-## How to Use
+1. **Run the Colab Notebook**
 
-Follow these steps to get the app up and running:
+   - [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1D2zLA3zKGckroaDruv2tIFh-t6g8ZJeQ?usp=sharing)
 
-### 1. Run the Colab
+   - Open and run the provided Google Colab notebook
+   - This will start the FastAPI backend and set up ngrok for public access
 
-[![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1D2zLA3zKGckroaDruv2tIFh-t6g8ZJeQ?usp=sharing)
+2. **Get the ngrok URL**
 
-First, run the FastAPI backend on Google Colab. Follow these steps:
+   - Look for the ngrok URL in the Colab notebook output
+   - It should look something like `https://xxxx-xx-xx-xxx-xx.ngrok.io`
 
-- Open the Colab notebook that contains the FastAPI backend code.
-- Run all the cells to start the FastAPI server.
+3. **Access the Streamlit Web Interface**
 
-### 2. Get Ngrok URL
+   - Open the Streamlit app in your web browser
+   - Paste the ngrok URL into the designated input field on the sidebar
 
-Once the Colab notebook is running, you will receive an Ngrok public URL (something like `https://xxxx.ngrok.io`). This URL will expose your FastAPI app to the internet.
+4. **Upload a Document**
 
-### 3. Paste Ngrok URL to Web
+   - Use the file upload feature in the Streamlit interface
+   - Support file types include .txt, .pdf, and .docx (adjust as necessary for your implementation)
 
-On the frontend (using Streamlit or any other UI you have set up):
+5. **Start Chatting**
+   - Once your document is uploaded, you can start asking questions
+   - The system will use the uploaded document as context for answering your queries
 
-- Paste the Ngrok URL into the web app where required (usually in the URL endpoint for the FastAPI backend).
+## Technical Details
 
-### 4. Upload a Document
+- Backend: FastAPI
+- Frontend: Streamlit
+- AI Model: LLaMa3
+- Vector Store: LlamaIndex
+- Deployment: Google Colab with ngrok for public access
 
-- In the web app, choose a PDF document to upload via the provided uploader.
+## Notes
 
-### 5. Start Chatting
+- Ensure you have a stable internet connection while using the app
+- The ngrok URL will change each time you run the Colab notebook
+- For persistent deployment, consider using a cloud platform instead of Colab and ngrok
 
-- Once the document is uploaded, you can start interacting and chatting with the app based on the content of the uploaded PDF.
+## Future Improvements
 
-## Troubleshooting
+- Add support for multiple document uploads
+- Implement user authentication for personalized experiences
+- Enhance the UI with more interactive visualizations of the document retrieval process
 
-- If you encounter a `400 Bad Request` error, ensure that CORS is enabled in your FastAPI backend.
-- Ensure that the file size is within the limits allowed by Ngrok or FastAPI.
-
----
-
-Enjoy using the app!
+For any issues or suggestions, please open an issue in this repository.
